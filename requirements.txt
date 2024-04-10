@@ -1,0 +1,12 @@
+PyPDF2
+nltk
+langchain
+couchbase
+sentence-transformers
+flask
+ollama
+flask-session
+flask-sqlalchemy
+diffusers
+wikipedia
+FlagEmbedding

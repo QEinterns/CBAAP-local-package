@@ -1,0 +1,6 @@
+
+brew install python@3.11
+CMAKE_ARGS="-DLLAMA_METAL=on" pip install -U llama-cpp-python --no-cache-dir
+cd 
+cd into lora folder and pip install requirements.txt then come back
+go to llama cpp folder and make and requirements.txt

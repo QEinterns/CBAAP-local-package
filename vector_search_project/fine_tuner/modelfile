@@ -1,0 +1,10 @@
+FROM "/Users/nishanth/local_finetune/vector_search_project/fine_tuner/finetune2/puty.gguf"
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+TEMPLATE """
+<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""

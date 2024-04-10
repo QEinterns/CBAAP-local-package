@@ -1,0 +1,61 @@
+Time for embed model startup: 1.9177436828613281
+Time for couchbase connection: 3.1868600845336914
+Time for embed model startup: 3.306136131286621
+Time for couchbase connection: 3.1350419521331787
+Time for embed model startup: 1.8133811950683594
+Time for couchbase connection: 2.8606181144714355
+Time for parsing input: 0.0006670951843261719
+Time for embedding the input: 0.22053790092468262
+Time for getting the context: 3.2400310039520264
+Time for model response(current oi): 23.965226888656616
+Time for all the operations : 27.426597118377686
+Time for embed model startup: 3.5439319610595703
+Time for couchbase connection: 2.9066967964172363
+Time for embed model startup: 1.8741059303283691
+Time for couchbase connection: 2.9739468097686768
+Time for embed model startup: 2.1059279441833496
+Time for couchbase connection: 3.046121835708618
+Time for embed model startup: 3.465339183807373
+Time for couchbase connection: 2.8843882083892822
+Time for embed model startup: 1.8461430072784424
+Time for couchbase connection: 3.007918119430542
+Time for embed model startup: 2.041311025619507
+Time for couchbase connection: 2.86539888381958
+Time for embed model startup: 1.8109300136566162
+Time for couchbase connection: 2.9403750896453857
+Time for embed model startup: 1.796868085861206
+Time for couchbase connection: 2.9375200271606445
+Time for embed model startup: 1.787179946899414
+Time for couchbase connection: 2.9224021434783936
+Time for embed model startup: 2.1984708309173584
+Time for couchbase connection: 3.0937368869781494
+Time for embed model startup: 1.8771648406982422
+Time for couchbase connection: 3.260845899581909
+Time for embed model startup: 2.109583854675293
+Time for couchbase connection: 2.9617717266082764
+Time for embed model startup: 1.7735369205474854
+Time for couchbase connection: 2.8479459285736084
+Time for embed model startup: 2.1918859481811523
+Time for couchbase connection: 2.989224910736084
+Time for embed model startup: 1.96002197265625
+Time for couchbase connection: 2.84295392036438
+Time for embed model startup: 2.7493388652801514
+Time for couchbase connection: 2.835286855697632
+Time for embed model startup: 1.7976748943328857
+Time for couchbase connection: 2.921463966369629
+Time for parsing input: 0.0011081695556640625
+Time for embedding the input: 0.17693495750427246
+Time for getting the context: 3.2226040363311768
+Time for model response(current oi): 54.258758783340454
+Time for all the operations : 57.65951895713806
+Time for embed model startup: 2.1833810806274414
+Time for couchbase connection: 3.115521192550659
+Time for embed model startup: 1.8990468978881836
+Time for couchbase connection: 3.001832962036133
+Time for parsing input: 0.0027093887329101562
+Time for embedding the input: 0.18394899368286133
+Time for getting the context: 3.325345993041992
+Time for model response(current oi): 19.982418060302734
+Time for all the operations : 23.494621992111206
+Time for embed model startup: 2.5355608463287354
+Time for couchbase connection: 3.5396788120269775

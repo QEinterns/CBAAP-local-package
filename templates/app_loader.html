@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating ...</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        * {
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 40rem;
+            height: 1rem;
+            border-radius: 20px;
+            color: #ff787a;
+            border: 2px solid;
+            position: relative;
+        }
+
+        .loader::before {
+            content: "";
+            position: absolute;
+            margin: 2px;
+            inset: 0 100% 0 0;
+            border-radius: inherit;
+            background: currentColor;
+            animation: l6 15s forwards; /* Changed to forwards to keep the last frame */
+        }
+
+        @keyframes l6 {
+            100% {
+                inset: 0;
+                background-color: #E22226; /* Change color to green */
+            }
+        }
+
+        /* Hide the button initially */
+
+        .button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Styles for the button hover state */
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* Styles for the button before animation */
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        /* Styles for the button hover state for before */
+        .button:hover::before {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+
+        /* Styles for the button text */
+        .button span {
+            position: relative;
+            z-index: 1;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 22rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 id="status">App creation in progress</h1>
+        </div>
+        <div class="loader" id="loader"></div>
+        <button class="button" id="redirectButton">Go to Dashboard</button>
+    </div>
+    
+
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the loader and status elements
+            var loader = document.getElementById('loader');
+            var status = document.getElementById('status');
+
+            // After the animation completes (15s), update the text and show the button
+            loader.addEventListener('animationend', function () {
+                status.textContent = 'App created successfully';
+                var button = document.getElementById('redirectButton');
+                button.style.display = 'block';
+            });
+            var redirectButton = document.getElementById('redirectButton');
+
+            // Add click event listener to the button
+            redirectButton.addEventListener('click', function () {
+                // Redirect to the URL stored in data.redirect_url
+                window.location.href = '/'; // Replace 'data.redirect_url' with the actual URL
+            });
+            // Handle button click to redirect
+            
+        });
+    </script>
+</body>
+</html>

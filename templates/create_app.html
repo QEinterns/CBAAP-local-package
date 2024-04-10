@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine tune friend</title>
+<link rel="stylesheet" href="static/create_app_styles.css">
+<script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    <div class="main_w">
+      <div class="frnt">
+        <header class="header">
+			<div class="header-content responsive-wrapper">
+				<div class="header-logo">
+					<a href="#" style="text-decoration: none;">
+						<div class="logoonly">
+							<img src="static/dashpics/logo.png" />
+						</div>
+						<h2 class="logotext">CBAAP</h2>
+					</a>
+				</div>
+				<div class="header-navigation">
+					<nav class="header-navigation-links">
+						<a href="#"> Home </a>
+						<a href="#"> History </a>
+					</nav>
+					<div class="header-navigation-actions">
+						
+						
+						<div class="toolkitt" style="display: flex;gap: 2rem;">
+							
+						
+	
+							<a href="#" class="button" onclick="logger()" style="margin-top:0.5rem">
+								<i class="ph-article-bold"></i>
+								<span>logger</span>
+							</a>
+						
+
+							
+							<a id="user-icon" class="user-icon" href="#" class="avatar">
+								<img style="margin-top:0.6rem" src="https://images.rawpixel.com/image_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtaWNvbjQtamlyMjA2NC1wb3ItbC5qcGc.jpg" alt="" />
+							</a>
+							
+						
+					</div>
+				</div>
+				
+			</div>
+		</header>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="main_container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+    
+            
+            <div class="container">
+
+                <div class="step" id="step1">
+                  <h2>CBAPP - Create App</h2>
+                  <p>Create your own chat bot with few clicks!</p>
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="nextBtn stepBtn"><span>&rarr;</span></button>
+                  </div>
+                </div>
+                
+                <div class="step" id="step2">
+                  <h2>Couchbase service</h2>
+                  <p>Select where you hosted the Couchbase server</p>
+
+                  <form id="couchbase-host-form">
+                  <div class="grid" id="couchbase-host">
+                    <div>
+                        <label class="card">
+                            <input name="couchbase-host" class="radio" type="radio" value="local">
+                            
+                            <span class="plan-details">
+                              <span class="plan-type">Local</span>
+                              <span class="plan-cost">127.0.0.1<span class="slash"></span><span class="plan-cycle"></span></span>
+                              <span style="font-size: smaller;">Choose this if you are running the Couchbase server locally</span>
+                            </span>
+                          </label>
+                    </div>
+                    <div>
+                    
+                    <label class="card">
+                      <input name="couchbase-host" class="radio" type="radio" value="vm">
+                      <span class="hidden-visually">Pro - $50 per month, 5 team members, 500 GB per month, 5 concurrent builds</span>
+                      <span class="plan-details" aria-hidden="true">
+                        <span class="plan-type">VM</span>
+                        <span class="plan-cost">public/private IP<span class="slash"></span><span class="plan-cycle"></span></span>
+                        <span style="font-size: smaller;">Choose this if you are running your Couchbase server in a private/public VM</span>
+                      </span>
+                    </label>
+                </div>
+                  </div>
+
+                </form>
+
+                  
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="nextBtn stepBtn"><span>&rarr;</span></button>
+                  </div>
+                </div>
+
+                <div class="step" id="step3">
+                  <h2>Couchbase server details</h2>
+
+                  <div class="context_body">   
+                    <div id="context_input" class="field">
+                        <input type="text" id="app_name" name="app_name" placeholder="app name" style="font-size:1rem;"/>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                    
+                    <div class="context_body">   
+                      <div id="context_input" class="field">
+                          <input type="text" id="username" name="username" placeholder="Username" style="font-size:1rem;"/>
+                          <div class="line"></div>
+                      </div>
+                  </div>
+
+                  <div class="context_body">   
+                    <div id="context_input" class="field">
+                        <input type="password" id="password" name="password" placeholder="Password" style="font-size:1rem;"/>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                    <div class="context_body">   
+                        <div id="context_input" class="field">
+                            <input type="text" id="ip_addr" name="ip_addr" placeholder="IP address of the host" style="font-size:1rem;"/>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+
+                    <div class="context_body">   
+                        <div id="context_input" class="field">
+                            <input type="text" id="bucket" name="bucket" placeholder="Bucket name" style="font-size:1rem;"/>
+                            <div class="line"></div>
+                        </div>
+                    </div> 
+              
+                   
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="nextBtn stepBtn"><span>&rarr;</span></button>
+                  </div>
+                </div>
+
+                <div class="step" id="step4">
+                  <h2>Couchbase server details</h2>
+                    
+
+                    <div class="context_body">   
+                      <div id="context_input" class="field">
+                          <input type="text" id="scope" name="scope" placeholder="Scope name" style="font-size:1rem;"/>
+                          <div class="line"></div>
+                      </div>
+                    </div>
+
+                    <div class="context_body">   
+                      <div id="context_input" class="field">
+                          <input type="text" id="collection" name="collection" placeholder="collection name" style="font-size:1rem;"/>
+                          <div class="line"></div>
+                      </div>
+                    </div>
+
+                    <div class="context_body">   
+                      <div id="context_input" class="field">
+                          <input type="text" id="index_name" name="index_name" placeholder="Index name" style="font-size:1rem;"/>
+                          <div class="line"></div>
+                      </div>
+                    </div>
+
+                    
+                   
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="nextBtn stepBtn"><span>&rarr;</span></button>
+                  </div>
+                </div>
+
+
+                <!-- <div class="step" id="step5">
+                  <h2>Choose Model</h2>
+                  <p>Choose one of the models available for fine tuning</p>
+
+                  <form id="modelForm">
+                  <div class="grid" id="models">
+                    <div>
+                        <label class="card">
+                            <input name="model" class="radio" type="radio" value="llama2">
+                            
+                            <span class="plan-details">
+                              <span class="plan-type">Basic</span>
+                              <span class="plan-cost">Llama 2<span class="slash">/</span><span class="plan-cycle">7B</span></span>
+                              <span style="font-size: smaller;">Llama is the next generation of our open source large language model, available for free for research and commercial use.</span>
+                            </span>
+                          </label>
+                    </div>
+                    <div>
+                    
+                    <label class="card">
+                      <input name="model" class="radio" type="radio" value="mistral7b">
+                      <span class="hidden-visually">Pro - $50 per month, 5 team members, 500 GB per month, 5 concurrent builds</span>
+                      <span class="plan-details" aria-hidden="true">
+                        <span class="plan-type">Pro</span>
+                        <span class="plan-cost">Mistral AI<span class="slash">/</span><span class="plan-cycle">7B</span></span>
+                        <span style="font-size: smaller;">The Mistral-7B-v0.1 Large Language Model (LLM) is a pretrained generative text model with 7 billion parameters.</span>
+                      </span>
+                    </label>
+                </div>
+                <div>
+                
+                    <label class="card">
+                      <input name="model" class="radio" type="radio" value="mistral13b">
+                      <span class="hidden-visually">Business - $200 per month, 5+ team members, 1000 GB per month, Unlimited builds</span>
+                      <span class="plan-details" aria-hidden="true">
+                        <span class="plan-type">Advanced</span>
+                        <span class="plan-cost">Mistral AI<span class="slash">/</span><span class="plan-cycle">13B</span></span>
+                        <span style="font-size: smaller;">The Mistral-13B-v0.1 Large Language Model (LLM) is a pretrained generative text model with 13 billion parameters.</span>
+                      </span>
+                    </label>
+                </div>
+                  </div>
+
+                </form>
+
+                  
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="nextBtn stepBtn"><span>&rarr;</span></button>
+                  </div>
+                </div> -->
+              
+                <form id="uploadForm" action="/upload_fine" method="POST" enctype="multipart/form-data"> 
+                  <div class="step" id="step5">
+                      <h2>Upload PDFs</h2>
+                      <p>Upload your PDFs:</p>
+          
+                      <div class="file-upload-container">
+                          <div class="file-upload">
+                              <input type="file" id="pdfInput" name="file" multiple>
+                              <label for="pdfInput">Drag & Drop or Click to Upload PDF Files</label>
+                          </div>
+                          <div class="file-list" id="fileList"></div>
+                      </div>
+          
+                      <div class="context_body">   
+                          <div id="context_input" class="field">
+                              <input type="text" id="context" name="context" placeholder="Context ?" style="font-size:1rem;"/>
+                              <div class="line"></div>
+                          </div>
+                      </div>
+          
+                      <div class="nav-btns">
+                          <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                          <button id="startButton" class="cool-button"><span>Start</span></button>
+                      </div>
+                  </div>
+              </form>
+              
+                <!-- <div class="step" id="step7">
+                  <h2>Model parameters</h2>
+                  <form id="additionalInfoForm">
+                    
+                    <div class="context_body">   
+                        <div id="context_input" class="field">
+                            <input type="text" id="iterations" name="iterations" placeholder="Number of Iterations" style="font-size:1rem;"/>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+
+                    <div class="context_body">   
+                        <div id="context_input" class="field">
+                            <input type="text" id="preferredModel" name="preferredModel" placeholder="Your preferred model name" style="font-size:1rem;"/>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <p>Quantization level</p>
+
+                    <form id="quantize_form">
+                        <div class="grid_a" id="quantize">
+                          <div>
+                              <label class="card_a">
+                                  <input name="quan" class="radio_a" type="radio" value="Q3_0">
+                                  <span class="plan-details_a">
+                                    <span class="plan-type_a">Q3_0</span>
+                                  </span>
+                                </label>
+                          </div>
+
+                          <div>
+                            <label class="card_a">
+                                <input name="quan" class="radio_a" type="radio" value="Q4_0">
+                                <span class="plan-details_a">
+                                  <span class="plan-type_a">Q4_0</span>
+                                </span>
+                              </label>
+                        </div>
+
+                        <div>
+                            <label class="card_a">
+                                <input name="quan" class="radio_a" type="radio" value="Q5_0">
+                                <span class="plan-details_a">
+                                  <span class="plan-type_a">Q5_0</span>
+                                </span>
+                              </label>
+                        </div>
+                          
+                        <div>
+                            <label class="card_a">
+                                <input name="quan" class="radio_a" type="radio" value="Q6_0">
+                                <span class="plan-details_a">
+                                  <span class="plan-type_a">Q6_0</span>
+                                </span>
+                              </label>
+                        </div>
+                      
+                        </div>
+      
+                    </form>
+                  </form>
+                  <div class="nav-btns">
+                    <button class="prevBtn stepBtn"><span>&larr;</span></button>
+                    <button class="cool-button"><span>Start</span></button>
+                  </div>
+                </div> -->
+                <div class="step" id="step6" style="margin-top: 1rem;">
+
+                  <h2>App creation in progress</h2>
+                  <h4>Est time : 40 secs</h4>
+                  <div id="loader" class="loader">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" stroke="#E22226" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+                        <!-- left line -->
+                        <path d="M 21 40 V 59">
+                          <animateTransform
+                            attributeName="transform"
+                            attributeType="XML"
+                            type="rotate"
+                            values="0 21 59; 180 21 59"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </path>
+                        <!-- right line -->
+                        <path d="M 79 40 V 59">
+                          <animateTransform
+                            attributeName="transform"
+                            attributeType="XML"
+                            type="rotate"
+                            values="0 79 59; -180 79 59"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </path>
+                        <!-- top line -->
+                        <path d="M 50 21 V 40">
+                          <animate
+                            attributeName="d"
+                            values="M 50 21 V 40; M 50 59 V 40"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </path>
+                        <!-- btm line -->
+                        <path d="M 50 60 V 79">
+                          <animate
+                            attributeName="d"
+                            values="M 50 60 V 79; M 50 98 V 79"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </path>
+                        <!-- top box -->
+                        <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+                          <animate
+                            attributeName="stroke"
+                            values="#ff7476; rgba(100,100,100,0)"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                            
+                        </path>
+                        <!-- mid box -->
+                        <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
+                        <!-- btm box -->
+                        <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+                          <animate
+                            attributeName="stroke"
+                            values="rgba(100,100,100,0); #ff7476"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                        </path>
+                        <animateTransform
+                          attributeName="transform"
+                          attributeType="XML"
+                          type="translate"
+                          values="0 0; 0 -19"
+                          dur="2s"
+                          repeatCount="indefinite" />
+                      </g>
+                    </svg>
+                    
+                  </div>
+                </div> 
+
+                <!-- <div class="step" id="step7" style="margin-top: 1rem;">
+                  <h2>Optimization</h2>
+                </div> -->
+                
+              </div>
+        </div>
+        </div>
+
+<script src="static/script_custom.js"></script>
+<script>
+  function logout() {
+			// Send an AJAX request to the logout route
+			fetch('/logout', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				// You may include a CSRF token in the request if your application uses CSRF protection
+				// body: JSON.stringify({ csrf_token: 'your_csrf_token' }),
+			})
+			.then(response => {
+				// Check if the logout was successful
+				if (response.ok) {
+					// Redirect to the login page or perform any other desired action
+					window.location.href = '/login';
+				} else {
+					// Handle error cases
+					console.error('Logout failed');
+				}
+			})
+			.catch(error => {
+				// Handle network errors
+				console.error('Network error:', error);
+			});
+		}
+</script>
+
+
+
+
+
+</body>
+</html>

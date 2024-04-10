@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Model</title>
+</head>
+<body>
+    <h1>Download Model</h1>
+    <p>Click the button below to download the model file.</p>
+    <form action="/download" method="GET">
+        <input type="hidden" name="model_name" value="{{ model_name }}">
+        <input type="hidden" name="iteration_count" value="{{ iteration_count }}">
+        <button type="submit">Download {{ model_name }}.gguf</button>
+    </form>
+</body>
+</html>

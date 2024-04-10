@@ -1,0 +1,7 @@
+mlx>=0.1
+safetensors
+huggingface-hub
+regex
+numpy
+tqdm
+Pillow
