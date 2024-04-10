@@ -18,6 +18,11 @@ source cbaap_env/bin/activate
 # Install dependencies from requirements.txt
 pip install -r requirements.txt
 
+mkdir upload_raggen
+mkdir uploaded_files_finetune
+mkdir uploaded_pdfs
+
+
 # Install llama-cpp-python with CMAKE_ARGS
 CMAKE_ARGS="-DLLAMA_METAL=on" pip install -U llama-cpp-python --no-cache-dir
 
