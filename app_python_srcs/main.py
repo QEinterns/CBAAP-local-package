@@ -22,8 +22,7 @@ import threading
 from app_python_srcs.movie_srcs.threading_t2i import threadit
 from FlagEmbedding import BGEM3FlagModel
 from config import COUCHBASE_URL
-
-
+from filter import profanityFilter
 
 def driver_function(movie_name,query,text_to_image,model,path):
 
@@ -66,12 +65,18 @@ def driver_function(movie_name,query,text_to_image,model,path):
 
     #query_enhancer
     enhanced_query = query_enhancer(context,user_raw_query)
+
+    enhanced_query = profanityFilter(enhanced_query)
+        
+    ok = threadit(enhanced_query,text_to_image,path)
+        
+    
     # enhanced_query = query_enhancer_orca(context,user_raw_query)
     # enhanced_query = query_enhancer_mistral(context,user_raw_query)
 
     #text2image
 
-    ok = threadit(enhanced_query,text_to_image,path)
+    
 
     return 1
 
